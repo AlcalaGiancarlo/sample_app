@@ -34,4 +34,10 @@ test "should get contact" do
   assert_response :success
   assert_select "title", "Contact | #{@base_title}"
 end
+
+test "should get products" do
+  get static_pages_products_url
+  assert_response :success
+  assert_select "title", "Ruby on Rails Tutorial Sample App"
+end
 end
